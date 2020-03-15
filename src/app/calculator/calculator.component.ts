@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorComponent implements OnInit {
 
+  display: string = '0';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  keyClicked(number: string) {
+    this.display += number;
+  }
+
+  reset() {
+    this.display = '';
   }
 
 }

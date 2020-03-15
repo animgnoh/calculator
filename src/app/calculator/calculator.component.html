@@ -1,7 +1,7 @@
 <div class="calculator">
 
   <div class="screen">
-    <div class="result">12345.67</div>
+    <div class="result">{{ display }}</div>
   </div>
 
   <div class="keyboard">
@@ -19,14 +19,14 @@
     </div>
     <div class="keyboard-row">
       <div class="key">1</div>
-      <div class="key">2</div>
-      <div class="key">3</div>
+      <div class="key" (click)="keyClicked('2')">2</div>
+      <div class="key" (click)="keyClicked('3')">3</div>
       <div class="key">+</div>
     </div>
     <div class="keyboard-row">
       <div class="key">.</div>
       <div class="key">0</div>
-      <div class="key">=</div>
+      <div class="key" (click)="reset()">=</div>
       <div class="key">-</div>
     </div>
 
